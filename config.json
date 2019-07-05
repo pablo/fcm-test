@@ -1,0 +1,12 @@
+{
+  "keyFile": "/Users/pablo/Desktop/tmp/service-account.json",
+  "qty": 3,
+  "doEnumerateMessages": true,
+  "projectId": "sudameris-roshka",
+  "message": "This is a TEST MESSAGE from the grave",
+  "title": "TESTING, TESTING...",
+  "tokens": [
+    "cphcI-QOdS0:APA91bGlQAJhQKaHj3p84dhr8X8kHaBZLuE6QNPHWIrLHGnVedzBUruzmvKn6HV75LKehZQyPKYHa379nCxYV_ORIParKx5CdU1m_p-m_BPWqfsbCrPWawKz16ZC7p2ZMyUVIbgXb-qH"
+  ],
+  "additionalData": null
+}
