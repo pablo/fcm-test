@@ -19,5 +19,41 @@ could have avoided with a couple of lines of code.
 
 ## Usage
 
+First of all, copy all JAR dependencies on the same folder the `fcm-test.jar` is.
+
+Then, create a `config.json` file similar to this:
+
+```json
+{
+  "keyFile": "/path/to/your/service-account.json",
+  "qty": 3,
+  "doEnumerateMessages": true,
+  "projectId": "your-project-id",
+  "message": "This is a TEST MESSAGE from the grave",
+  "title": "TESTING, TESTING...",
+  "tokens": [
+    "list",
+    "all-the",
+    "push-notifications",
+    "tokens you want to send the notification to"
+  ],
+  "additionalData": null
+}
+```
+
+Where:
+
+1. `keyFile` is the `service-account.json` file. You get this from the FCM console at Google's site.
+2. `qty` is how many messages  you want to send.
+3. `doEnumerateMessages` indicates if software should append message number to `title` and `message`.
+4. `projectId` is the configured project id. You set this in the FCM console at Google's site.
+5. `message` is the message you want to send
+6. `title` is the title you want to send
+7. `tokens` is a JSON array of the push notifications tokens you want the messages sent to.
+8. additionalData is a JSON object that will be sent along with the notification
+
+Finally, you just run:
 
 ```$ java -jar fcm-test.jar```
+
+If everything is configured as expected, you should get all the notifications on your devices.
