@@ -12,6 +12,7 @@ import org.apache.logging.log4j.core.config.DefaultConfiguration;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.HashMap;
 
 public class Main {
 
@@ -62,7 +63,12 @@ public class Main {
                 JFCM jFcm = new JFCM();
                 Message message = new Message();
                 jFcm.setMessage(message);
-                message.setData(config.getAdditionalData());
+                if (config.getAdditionalData() != null) {
+                    message.setData(config.getAdditionalData());
+                } else {
+                    message.setData(new HashMap<>());
+                }
+
 
                 Notification notification = new Notification();
                 message.setNotification(notification);

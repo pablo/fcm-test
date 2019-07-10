@@ -1,12 +1,17 @@
 {
   "keyFile": "/Users/pablo/Desktop/tmp/service-account.json",
-  "qty": 3,
-  "doEnumerateMessages": true,
+  "qty": 1,
+  "doEnumerateMessages": false,
   "projectId": "sudameris-roshka",
   "message": "This is a TEST MESSAGE from the grave",
   "title": "TESTING, TESTING...",
   "tokens": [
-    "cphcI-QOdS0:APA91bGlQAJhQKaHj3p84dhr8X8kHaBZLuE6QNPHWIrLHGnVedzBUruzmvKn6HV75LKehZQyPKYHa379nCxYV_ORIParKx5CdU1m_p-m_BPWqfsbCrPWawKz16ZC7p2ZMyUVIbgXb-qH"
+    "cphcI-QOdS0:APA91bGlQAJhQKaHj3p84dhr8X8kHaBZLuE6QNPHWIrLHGnVedzBUruzmvKn6HV75LKehZQyPKYHa379nCxYV_ORIParKx5CdU1m_p-m_BPWqfsbCrPWawKz16ZC7p2ZMyUVIbgXb-qH",
+    "dQ8VT0vRuKM:APA91bGenSrIClcmH-NcIJLtj1YcahqtEEDr6Dag0FqA-YvNww4d4Bd7vLMJ3B8tjG6HYoHv8huG7m7910XAcwCW6Et2O2lnTe5Sa_J2DdozrG5UDkRQourDyaYMLyWb8fJuVZK3wjS4"
   ],
-  "additionalData": null
+  "additionalData":
+    {
+      "t1":"this is some data",
+      "t2":"very interesting"
+    }
 }
