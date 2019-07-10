@@ -1,5 +1,7 @@
 package com.roshka.test.fcm.config;
 
+import com.roshka.test.fcm.firebase.bean.AndroidConfig;
+
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +15,7 @@ public class Config {
     private String title;
     private List<String> tokens;
     private Map<String, Object> additionalData;
-
+    private AndroidConfig android;
 
     public String getKeyFile() {
         return keyFile;
@@ -81,6 +83,14 @@ public class Config {
 
     public void setProjectId(String projectId) {
         this.projectId = projectId;
+    }
+
+    public AndroidConfig getAndroid() {
+        return android;
+    }
+
+    public void setAndroid(AndroidConfig android) {
+        this.android = android;
     }
 }
 

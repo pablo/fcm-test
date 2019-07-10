@@ -80,6 +80,7 @@ public class FCMHelper {
             ObjectMapper objectMapper = new ObjectMapper();
 
             String val = objectMapper.writeValueAsString(jFcm);
+            logger.debug("Sending JSON: " + val);
             if (val != null)
                 outputStream.write(val.getBytes(Charset.forName("UTF-8")));
             outputStream.flush();
@@ -90,7 +91,7 @@ public class FCMHelper {
                 return objectMapper.readValue(connection.getInputStream(), SendMessageResponse.class);
             } else {
                 String errorResponse = IOUtils.toString(new InputStreamReader(connection.getErrorStream()));
-                logger.error("Can't send message to firebase:\n", errorResponse);
+                logger.error("Can't send message to firebase:\n" + errorResponse);
             }
         } catch (IOException e) {
             logger.error("IOException while trying to delivery message to Firebase", e);

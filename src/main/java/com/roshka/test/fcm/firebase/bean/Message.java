@@ -1,8 +1,12 @@
 package com.roshka.test.fcm.firebase.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Message {
 
     public Message()
@@ -12,6 +16,7 @@ public class Message {
 
     private String token;
     private Map<String, Object> data;
+    private AndroidConfig android;
 
     private Notification notification;
 
@@ -41,5 +46,13 @@ public class Message {
 
     public void addData(String key, String value) {
         data.put(key, value);
+    }
+
+    public AndroidConfig getAndroid() {
+        return android;
+    }
+
+    public void setAndroid(AndroidConfig android) {
+        this.android = android;
     }
 }

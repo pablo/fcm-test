@@ -7,11 +7,21 @@
   "title": "TESTING, TESTING...",
   "tokens": [
     "cphcI-QOdS0:APA91bGlQAJhQKaHj3p84dhr8X8kHaBZLuE6QNPHWIrLHGnVedzBUruzmvKn6HV75LKehZQyPKYHa379nCxYV_ORIParKx5CdU1m_p-m_BPWqfsbCrPWawKz16ZC7p2ZMyUVIbgXb-qH",
-    "dQ8VT0vRuKM:APA91bGenSrIClcmH-NcIJLtj1YcahqtEEDr6Dag0FqA-YvNww4d4Bd7vLMJ3B8tjG6HYoHv8huG7m7910XAcwCW6Et2O2lnTe5Sa_J2DdozrG5UDkRQourDyaYMLyWb8fJuVZK3wjS4"
+    "dQ8VT0vRuKM:APA91bGenSrIClcmH-NcIJLtj1YcahqtEEDr6Dag0FqA-YvNww4d4Bd7vLMJ3B8tjG6HYoHv8huG7m7910XAcwCW6Et2O2lnTe5Sa_J2DdozrG5UDkRQourDyaYMLyWb8fJuVZK3wjS4",
+    "er1fJsRv8_8:APA91bFVnHf4WYrU2cCKA3SsfPwtRHD2vVmWAL-MeCCc4INGnZrLswMHQKmNo9Z8y7nqSp58BhCIKVwKmnZJ4XQsEyJKGq_65US58ybU4foQ8s4BAQUzI-FJcvuni78r0sHZGrfkLbxc"
   ],
-  "additionalData":
-    {
-      "t1":"this is some data",
-      "t2":"very interesting"
-    }
+  "additionalData": {
+    "s2fa_token":"12028045-093f-46c4-9085-b6c87f6757b8",
+    "user_type":"SUDAMERIS_ID",
+    "transaction_type":"LOGIN",
+    "user_value":"Prueba778",
+    "message": "This is TEST",
+    "title": "Holas"
+  },
+  "android": {
+    "notification": {
+      "click_action": "MY_CLK_SUMMER"
+    },
+    "priority": "NORMAL"
+  }
 }

@@ -2,9 +2,7 @@ package com.roshka.test.fcm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.roshka.test.fcm.config.Config;
-import com.roshka.test.fcm.firebase.bean.JFCM;
-import com.roshka.test.fcm.firebase.bean.Message;
-import com.roshka.test.fcm.firebase.bean.Notification;
+import com.roshka.test.fcm.firebase.bean.*;
 import com.roshka.test.fcm.firebase.util.FCMHelper;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
@@ -52,6 +50,7 @@ public class Main {
             for (int i=1; i<=qty; i++) {
                 String msg = config.getMessage() != null ? config.getMessage() + " " : "Test Message ";
                 String title = config.getTitle() != null ? config.getTitle() + " " : "Test Title ";
+
                 if (doEnumerate) {
                     msg += String.valueOf(i);
                     title += String.valueOf(i);
@@ -66,14 +65,26 @@ public class Main {
                 if (config.getAdditionalData() != null) {
                     message.setData(config.getAdditionalData());
                 } else {
-                    message.setData(new HashMap<>());
+                    //message.setData(new HashMap<>());
                 }
-
 
                 Notification notification = new Notification();
                 message.setNotification(notification);
                 notification.setTitle(title);
                 notification.setBody(msg);
+
+                // setup android specific content
+                AndroidConfig android = config.getAndroid();
+                if (android != null) {
+                    AndroidNotification androidNotification = android.getNotification();
+                    if (androidNotification == null) {
+                        androidNotification = new AndroidNotification();
+                        message.setAndroid(config.getAndroid());
+                    }
+                    androidNotification.setBody(msg);
+                    androidNotification.setTitle(title);
+                }
+                message.setAndroid(android);
 
                 for (String token: config.getTokens()) {
                     logger.debug("Sending message " + i + " to token " + token);
